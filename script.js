@@ -29,10 +29,10 @@ function wishMe() {
     speak("hoje é dia "+weekday+" do mês "+month+" de "+year)
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
     speak("inicializando assistente pika 3000..."); 
     wishMe(); 
-}
+});
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
