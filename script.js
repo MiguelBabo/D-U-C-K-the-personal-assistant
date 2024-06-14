@@ -11,6 +11,8 @@ function speak(text) {
     window.speechSynthesis.speak(text_speak);
 }
 
+speak("inicializando assistente pika 3000..."); 
+
 function wishMe() {
     var day = new Date();
     var hour = day.getHours();
@@ -28,11 +30,8 @@ function wishMe() {
 
     speak("hoje é dia "+weekday+" do mês "+month+" de "+year)
 }
-
-window.addEventListener('load', () => {
-    speak("inicializando assistente pika 3000..."); 
-    wishMe(); 
-});
+    
+wishMe(); 
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
